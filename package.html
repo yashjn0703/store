@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" href="CSS/main.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"
+        />
+        <title>Apni Dukaan</title>
+    </head>
+
+    <body>
+        <!--Navbar-->
+        <nav class="head">
+            <div class="navbar-top">
+                <div>
+                    <a href="index.html" class="logo"> <i class="fas fa-shopping-basket"></i> Apni Dukaan </a>
+                </div>
+                <div>
+                    <!--My account part-->
+                    <div class="account">
+                        <a href="index.html">
+                            <button class="account-btn">
+                                <i class="fas fa-user-alt"></i>
+                            </button>
+                            <span class="account-text">My account</span>
+                        </a>
+
+                    </div>
+                    <!--Shopping cart-->
+                    <div class="shopping-cart">
+                        <div class="sum-prices">
+                            <i
+                                class="fas fa-shopping-cart shoppingCartButton"
+                            ></i>
+                            <!--The total prices of products in the shopping cart -->
+                            <h6 id="sum-prices"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="producstOnCart hide">
+                <div class="overlay"></div>
+                <div class="top">
+                    <button id="closeButton">
+                        <i class="fas fa-times-circle"></i>
+                    </button>
+                    <h3>Cart</h3>
+                </div>
+                <ul id="buyItems">
+                    <h4 class="empty">Your shopping cart is empty</h4>
+
+                </ul>
+                <button class="btn checkout hidden" onclick="doSomething()">Check out</button>
+            </div>
+        </nav>
+
+
+
+
+      <div class="product-container">
+          <h1 class="heading"> our <span>packages</span> </h1>
+          <div class="products">
+              <div class="product">
+                  <div class="product-under">
+                      <figure class="product-image">
+                          <img
+                              src="Images/producs-images/pac1.jpg"
+                              alt="popular"
+                          />
+                          <div class="product-over">
+                              <button
+                                  class="btn btn-small addToCart"
+                                  data-product-id="9"
+                              >
+                                  <i class="fas fa-cart-plus"></i>Add
+                                  to cart
+                              </button>
+                          </div>
+                      </figure>
+                      <div class="product-summary">
+                          <h4 class="productName">Fruits+Vegetables</h4>
+                          <p>
+                              Get 5kg of fruits and 5kg of vegetables
+                          </p>
+                          <h6 class="price">
+                              Rs.<span class="priceValue">1999</span>
+                          </h6>
+                      </div>
+                  </div>
+              </div>
+              <div class="product">
+                  <div class="product-under">
+                      <figure class="product-image">
+                          <img
+                              src="Images/producs-images/pac2.jpg"
+                              alt="popular"
+                          />
+                          <div class="product-over">
+                              <button
+                                  class="btn btn-small addToCart"
+                                  data-product-id="10"
+                              >
+                                  <i class="fas fa-cart-plus"></i>Add
+                                  to cart
+                              </button>
+                          </div>
+                      </figure>
+                      <div class="product-summary">
+                          <h4 class="productName">Fruits+dairy</h4>
+                          <p>
+                              Get 5kg of fruits with dairy products
+                          </p>
+                          <h6 class="price">
+                              Rs.<span class="priceValue">1999</span>
+                          </h6>
+                      </div>
+                  </div>
+              </div>
+              <div class="product">
+                  <div class="product-under">
+                      <figure class="product-image">
+                          <img
+                              src="Images/producs-images/p3.jpg"
+                              alt="popular"
+                          />
+                          <div class="product-over">
+                              <button
+                                  class="btn btn-small addToCart"
+                                  data-product-id="11"
+                              >
+                                  <i class="fas fa-cart-plus"></i>Add
+                                  to cart
+                              </button>
+                          </div>
+                      </figure>
+                      <div class="product-summary">
+                          <h4 class="productName">Vegetables+dairy</h4>
+                          <p>
+                              Get 5kg of vegetables with dairy products
+                          </p>
+                          <h6 class="price">
+                              Rs.<span class="priceValue">1999</span>
+                          </h6>
+                      </div>
+                  </div>
+              </div>
+              <div class="product">
+                  <div class="product-under">
+                      <figure class="product-image">
+                          <img
+                              src="Images/producs-images/p4.jpg"
+                              alt="popular"
+                              height="175rem"
+                          />
+                          <div class="product-over">
+                              <button
+                                  class="btn btn-small addToCart"
+                                  data-product-id="12"
+                              >
+                                  <i class="fas fa-cart-plus"></i>Add
+                                  to cart
+                              </button>
+                          </div>
+                      </figure>
+                      <div class="product-summary">
+                          <h4 class="productName">Dairy Combo+ Snacks</h4>
+                          <p>
+                              Get all kind of snacks with dairy combo
+                          </p>
+                          <h6 class="price">
+                              Rs<span class="priceValue">1999</span>
+                          </h6>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+
+
+        <footer>
+            <div class="footer-second">
+                <div class="footer-column-2">
+                    <h3>Customer service</h3>
+                    <a href="#">Contact</a>
+                    <a href="#">Track your order</a>
+                </div>
+                <div class="footer-column-3">
+                    <h3>About us</h3>
+                    <a href="about.html">Who we are</a>
+                </div>
+            </div>
+            <ul class="footer-last">
+                <li>
+                    <p><i class="fab fa-cc-mastercard"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-paypal"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-visa"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-amex"></i></p>
+                </li>
+            </ul>
+        </footer>
+        <script src="JS/script.js"></script>
+        <script src="shopping-cart.js"></script>
+    </body>
+</html>

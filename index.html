@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" href="CSS/main.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"
+        />
+        <title>Apni Dukaan</title>
+    </head>
+
+    <body>
+        <!--Navbar-->
+        <nav class="head">
+            <div class="navbar-top">
+                <div>
+                    <a href="index.html" class="logo"> <i class="fas fa-shopping-basket"></i> Apni Dukaan </a>
+                </div>
+                <div>
+                    <!--My account part-->
+                    <div class="account">
+                        <a href="index.html">
+                            <button class="account-btn">
+                                <i class="fas fa-user-alt"></i>
+                            </button>
+                            <span class="account-text">My account</span>
+                        </a>
+
+                    </div>
+                    <!--Shopping cart-->
+                    <div class="shopping-cart">
+                        <div class="sum-prices">
+                            <i
+                                class="fas fa-shopping-cart shoppingCartButton"
+                            ></i>
+                            <!--The total prices of products in the shopping cart -->
+                            <h6 id="sum-prices"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar" id="navbar">
+                <div class="links">
+                    <ul>
+                        <li class="nav-links">
+                            <a href="products.html" class="link">Products</a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="about.html" class="link">About us</a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="mobil.html" class="link">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="producstOnCart hide">
+                <div class="overlay"></div>
+                <div class="top">
+                    <button id="closeButton">
+                        <i class="fas fa-times-circle"></i>
+                    </button>
+                    <h3>Cart</h3>
+                </div>
+                <ul id="buyItems">
+                    <h4 class="empty">Your shopping cart is empty</h4>
+
+                </ul>
+                <button class="btn checkout hidden" onclick="doSomething()">Check out</button>
+            </div>
+        </nav>
+
+        <section class="home" id="home">
+
+    <div class="content">
+        <h3><span>All Your daily needs under one roof</span></h3>
+        <p>We are on a mission to provide you best service at best prices!</p>
+        <a href="products.html" class="btn">shop now</a>
+    </div>
+
+</section>
+
+<section class="features" id="features">
+
+    <h1 class="heading"> our <span>features</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="Images/feature-img-1.png" alt="">
+            <h3>fresh and organic</h3>
+            <p>We never compromise on quality!</p>
+        </div>
+
+        <div class="box">
+            <img src="Images/feature-img-2.png" alt="">
+            <h3>free delivery</h3>
+            <p>We provide fast and free delivery at your door step</p>
+        </div>
+
+        <div class="box">
+            <img src="Images/feature-img-3.png" alt="">
+            <h3>easy payments</h3>
+            <p>We provide easy payment solutions as well as cash on delivery</p>
+        </div>
+
+    </div>
+
+</section>
+<div class="pro">
+  <main>
+      <section class="main-section">
+          <div class="product-container">
+              <h1 class="heading"> our <span>Products</span> </h1>
+              <div class="products">
+                  <div class="product">
+                      <div class="product-under">
+                          <figure class="product-image">
+                              <img
+                                  src="Images/producs-images/bread.jpg"
+                                  alt="popular"
+                              />
+                              <div class="product-over">
+                                  <button
+                                      class="btn btn-small addToCart"
+                                      data-product-id="1"
+                                  >
+                                      <i class="fas fa-cart-plus"></i>Add
+                                      to cart
+                                  </button>
+                              </div>
+                          </figure>
+                          <div class="product-summary">
+                              <h4 class="productName">Harvest King Bread</h4>
+                              <p>
+                                  Fresh pack bread
+                              </p>
+                              <h6 class="price">
+                                  Rs.<span class="priceValue">40</span>
+                              </h6>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="product">
+                      <div class="product-under">
+                          <figure class="product-image">
+                              <img
+                                  src="Images/producs-images/amulmilk.jpg"
+                                  alt="popular"
+                              />
+                              <div class="product-over">
+                                  <button
+                                      class="btn btn-small addToCart"
+                                      data-product-id="2"
+                                  >
+                                      <i class="fas fa-cart-plus"></i>Add
+                                      to cart
+                                  </button>
+                              </div>
+                          </figure>
+                          <div class="product-summary">
+                              <h4 class="productName">Amul Milk</h4>
+                              <p>
+                                  0.5L Fresh creamy milk
+                              </p>
+                              <h6 class="price">
+                                  Rs.<span class="priceValue">32</span>
+                              </h6>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="product">
+                      <div class="product-under">
+                          <figure class="product-image">
+                              <img
+                                  src="Images/producs-images/amulcheese.png"
+                                  alt="popular"
+                              />
+                              <div class="product-over">
+                                  <button
+                                      class="btn btn-small addToCart"
+                                      data-product-id="3"
+                                  >
+                                      <i class="fas fa-cart-plus"></i>Add
+                                      to cart
+                                  </button>
+                              </div>
+                          </figure>
+                          <div class="product-summary">
+                              <h4 class="productName">Amul cheese</h4>
+                              <p>
+                                  1 kg block of tasty cheese
+                              </p>
+                              <h6 class="price">
+                                  Rs.<span class="priceValue">95</span>
+                              </h6>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="product">
+                      <div class="product-under">
+                          <figure class="product-image">
+                              <img
+                                  src="Images/producs-images/cafe.jpg"
+                                  alt="popular"
+                                  height="175rem"
+                              />
+                              <div class="product-over">
+                                  <button
+                                      class="btn btn-small addToCart"
+                                      data-product-id="4"
+                                  >
+                                      <i class="fas fa-cart-plus"></i>Add
+                                      to cart
+                                  </button>
+                              </div>
+                          </figure>
+                          <div class="product-summary">
+                              <h4 class="productName">Amul Cool cafe</h4>
+                              <p>
+                                  Amul cool cafe bottel edition
+                              </p>
+                              <h6 class="price">
+                                  Rs<span class="priceValue">35</span>
+                              </h6>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="product">
+                      <div class="product-under">
+                          <figure class="product-image">
+                              <img
+                                  src="Images/producs-images/drmyo.jpg"
+                                  alt="popular"
+                                  height="250px"
+                              />
+                              <div class="product-over">
+                                  <button
+                                      class="btn btn-small addToCart"
+                                      data-product-id="5"
+                                  >
+                                      <i class="fas fa-cart-plus"></i>Add
+                                      to cart
+                                  </button>
+                              </div>
+                          </figure>
+                          <div class="product-summary">
+                              <h4 class="productName">Dr.Oetker Mayonnaise</h4>
+                              <p>
+                                  Dr.Oetker Funfoods Mayonnaise
+                              </p>
+                              <h6 class="price">
+                                  Rs.<span class="priceValue">125</span>
+                              </h6>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="product">
+                      <div class="product-under">
+                          <figure class="product-image">
+                              <img
+                                  src="Images/producs-images/amulbutter.jpg"
+                                  alt="popular"
+                              />
+                              <div class="product-over">
+                                  <button
+                                      class="btn btn-small addToCart"
+                                      data-product-id="6"
+                                  >
+                                      <i class="fas fa-cart-plus"></i>Add
+                                      to cart
+                                  </button>
+                              </div>
+                          </figure>
+                          <div class="product-summary">
+                              <h4 class="productName">Amul Butter</h4>
+                              <p>
+                                  1kg block fresh amul butter
+                              </p>
+                              <h6 class="price">
+                                  Rs.<span class="priceValue">252</span>
+                              </h6>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="product">
+                      <div class="product-under">
+                          <figure class="product-image">
+                              <img
+                                  src="Images/producs-images/custord.jpg"
+                                  alt="popular"
+                              />
+                              <div class="product-over">
+                                  <button
+                                      class="btn btn-small addToCart"
+                                      data-product-id="7"
+                                  >
+                                      <i class="fas fa-cart-plus"></i>Add
+                                      to cart
+                                  </button>
+                              </div>
+                          </figure>
+                          <div class="product-summary">
+                              <h4 class="productName">Custord powder</h4>
+                              <p>
+                                  Pillsburry custord powder vanilla flovour
+                              </p>
+                              <h6 class="price">
+                                  Rs.<span class="priceValue">50</span>
+                              </h6>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="product">
+                      <div class="product-under">
+                          <figure class="product-image">
+                              <img
+                                  src="Images/producs-images/cream.jpg"
+                                  alt="popular"
+                              />
+                              <div class="product-over">
+                                  <button
+                                      class="btn btn-small addToCart"
+                                      data-product-id="8"
+                                  >
+                                      <i class="fas fa-cart-plus"></i>Add
+                                      to cart
+                                  </button>
+                              </div>
+                          </figure>
+                          <div class="product-summary">
+                              <h4 class="productName">Amul Cream</h4>
+                              <p>
+                                  200g fresh cream
+                              </p>
+                              <h6 class="price">
+                                  Rs.<span class="priceValue">80</span>
+                              </h6>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="main-section">
+          <div class="pop-mobiles">
+              <div class="pop-mobiles-1">
+                  <figure>
+                      <img
+                          src="Images/package.png"
+                          height="1000px"
+                          width="1000px"
+                      />
+                  </figure>
+                  <div>
+                      <h2>Buy our special packages</h2>
+                      <p>
+                          Get complete package of vegetables,fruits and dairy products including
+                          bread, butter, 1L Milk in just Rs.1999
+                      </p>
+                      <h4>Rs.1999</h4>
+                      <a href="package.html" class="btn"
+                          >Buy now<i class="fas fa-angle-right"></i
+                      ></a>
+                  </div>
+              </div>
+              <div class="product-container">
+                  <h1 class="heading"> our <span>packages</span> </h1>
+                  <div class="products">
+                      <div class="product">
+                          <div class="product-under">
+                              <figure class="product-image">
+                                  <img
+                                      src="Images/producs-images/pac1.jpg"
+                                      alt="popular"
+                                  />
+                                  <div class="product-over">
+                                      <button
+                                          class="btn btn-small addToCart"
+                                          data-product-id="9"
+                                      >
+                                          <i class="fas fa-cart-plus"></i>Add
+                                          to cart
+                                      </button>
+                                  </div>
+                              </figure>
+                              <div class="product-summary">
+                                  <h4 class="productName">Fruits+Vegetables</h4>
+                                  <p>
+                                      Get 5kg of fruits and 5kg of vegetables
+                                  </p>
+                                  <h6 class="price">
+                                      Rs.<span class="priceValue">1999</span>
+                                  </h6>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="product">
+                          <div class="product-under">
+                              <figure class="product-image">
+                                  <img
+                                      src="Images/producs-images/pac2.jpg"
+                                      alt="popular"
+                                  />
+                                  <div class="product-over">
+                                      <button
+                                          class="btn btn-small addToCart"
+                                          data-product-id="10"
+                                      >
+                                          <i class="fas fa-cart-plus"></i>Add
+                                          to cart
+                                      </button>
+                                  </div>
+                              </figure>
+                              <div class="product-summary">
+                                  <h4 class="productName">Fruits+dairy</h4>
+                                  <p>
+                                      Get 5kg of fruits with dairy products
+                                  </p>
+                                  <h6 class="price">
+                                      Rs.<span class="priceValue">1999</span>
+                                  </h6>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="product">
+                          <div class="product-under">
+                              <figure class="product-image">
+                                  <img
+                                      src="Images/producs-images/p3.jpg"
+                                      alt="popular"
+                                  />
+                                  <div class="product-over">
+                                      <button
+                                          class="btn btn-small addToCart"
+                                          data-product-id="11"
+                                      >
+                                          <i class="fas fa-cart-plus"></i>Add
+                                          to cart
+                                      </button>
+                                  </div>
+                              </figure>
+                              <div class="product-summary">
+                                  <h4 class="productName">Vegetables+dairy</h4>
+                                  <p>
+                                      Get 5kg of vegetables with dairy products
+                                  </p>
+                                  <h6 class="price">
+                                      Rs.<span class="priceValue">1999</span>
+                                  </h6>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="product">
+                          <div class="product-under">
+                              <figure class="product-image">
+                                  <img
+                                      src="Images/producs-images/p4.jpg"
+                                      alt="popular"
+                                      height="175rem"
+                                  />
+                                  <div class="product-over">
+                                      <button
+                                          class="btn btn-small addToCart"
+                                          data-product-id="12"
+                                      >
+                                          <i class="fas fa-cart-plus"></i>Add
+                                          to cart
+                                      </button>
+                                  </div>
+                              </figure>
+                              <div class="product-summary">
+                                  <h4 class="productName">Dairy Combo+ Snacks</h4>
+                                  <p>
+                                      Get all kind of snacks with dairy combo
+                                  </p>
+                                  <h6 class="price">
+                                      Rs<span class="priceValue">1999</span>
+                                  </h6>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+
+              <h3>Popular Products</h3>
+              <div class="pop-mobiles-2">
+                  <ul class="products">
+                      <li class="product">
+                          <div class="product-under">
+                              <figure class="product-image">
+                                  <img
+                                      src="Images/producs-images/syrup.jpg"
+                                      alt="popular"
+                                  />
+                                  <div class="product-over">
+                                      <button
+                                          class="btn btn-small addToCart"
+                                          data-product-id="13"
+                                      >
+                                          <i class="fas fa-cart-plus"></i
+                                          >Add to cart
+                                      </button>
+                                  </div>
+                              </figure>
+                              <div class="product-summary">
+                                  <h4 class="productName">Hershey's Syrup</h4>
+                                  <h4 class="price">
+                                      Rs.<span class="priceValue"
+                                          >100</span
+                                      >
+                                  </h4>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="product">
+                          <div class="product-under">
+                              <figure class="product-image">
+                                  <img
+                                      src="Images/producs-images/parleg.jpg"
+                                      alt="popular"
+                                  />
+                                  <div class="product-over">
+                                      <button
+                                          class="btn btn-small addToCart"
+                                          data-product-id="18"
+                                      >
+                                          <i class="fas fa-cart-plus"></i
+                                          >Add to cart
+                                      </button>
+                                  </div>
+                              </figure>
+                              <div class="product-summary">
+                                  <h4 class="productName">Parley G gold</h4>
+                                  <h4 class="price">
+                                      Rs.<span class="priceValue"
+                                          >10</span
+                                      >
+                                  </h4>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="product">
+                          <div class="product-under">
+                              <figure class="product-image">
+                                  <img
+                                      src="Images/producs-images/coffee.jpg"
+                                      alt="popular"
+                                  />
+                                  <div class="product-over">
+                                      <button
+                                          class="btn btn-small addToCart"
+                                          data-product-id="14"
+                                      >
+                                          <i class="fas fa-cart-plus"></i
+                                          >Add to cart
+                                      </button>
+                                  </div>
+                              </figure>
+                              <div class="product-summary">
+                                  <h4 class="productName">Nescafe coffee</h4>
+                                  <h4 class="price">
+                                      Rs.<span class="priceValue"
+                                          >314</span
+                                      >
+                                  </h4>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="product">
+                          <div class="product-under">
+                              <figure class="product-image">
+                                  <img
+                                      src="Images/producs-images/cappuccino.jpg"
+                                      alt="popular"
+                                  />
+                                  <div class="product-over">
+                                      <button
+                                          class="btn btn-small addToCart"
+                                          data-product-id="15"
+                                      >
+                                          <i class="fas fa-cart-plus"></i
+                                          >Add to cart
+                                      </button>
+                                  </div>
+                              </figure>
+                              <div class="product-summary">
+                                  <h4 class="productName">Green Brew cappucino</h4>
+                                  <h4 class="price">
+                                      Rs.<span class="priceValue"
+                                          >250</span
+                                      >
+                                  </h4>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="product">
+                          <div class="product-under">
+                              <figure class="product-image">
+                                  <img
+                                      src="Images/producs-images/orion.jpg"
+                                      alt="popular"
+                                  />
+                                  <div class="product-over">
+                                      <button
+                                          class="btn btn-small addToCart"
+                                          data-product-id="16"
+                                      >
+                                          <i class="fas fa-cart-plus"></i
+                                          >Add to cart
+                                      </button>
+                                  </div>
+                              </figure>
+                              <div class="product-summary">
+                                  <h4 class="productName">Orion Chocochip cookies</h4>
+                                  <h4 class="price">
+                                      Rs.<span class="priceValue"
+                                          >120</span
+                                      >
+                                  </h4>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="product">
+                          <div class="product-under">
+                              <figure class="product-image">
+                                  <img
+                                      src="Images/producs-images/haldiram.jpg"
+                                      alt="popular"
+                                  />
+                                  <div class="product-over">
+                                      <button
+                                          class="btn btn-small addToCart"
+                                          data-product-id="17"
+                                      >
+                                          <i class="fas fa-cart-plus"></i
+                                          >Add to cart
+                                      </button>
+                                  </div>
+                              </figure>
+                              <div class="product-summary">
+                                  <h4 class="productName">Haldiram Navratan</h4>
+                                  <h4 class="price">
+                                      Rs.<span class="priceValue"
+                                          >110</span
+                                      >
+                                  </h4>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="product">
+                          <div class="product-under">
+                              <figure class="product-image">
+                                  <img
+                                      src="Images/producs-images/lays.jpg"
+                                      alt="popular"
+                                  />
+                                  <div class="product-over">
+                                      <button
+                                          class="btn btn-small addToCart"
+                                          data-product-id="19"
+                                      >
+                                          <i class="fas fa-cart-plus"></i
+                                          >Add to cart
+                                      </button>
+                                  </div>
+                              </figure>
+                              <div class="product-summary">
+                                  <h4 class="productName">Lays India's magic masala</h4>
+                                  <h4 class="price">
+                                      Rs.<span class="priceValue"
+                                          >30</span
+                                      >
+                                  </h4>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="product">
+                          <div class="product-under">
+                              <figure class="product-image">
+                                  <img
+                                      src="Images/producs-images/chips.jpg"
+                                      alt="popular"
+                                  />
+                                  <div class="product-over">
+                                      <button
+                                          class="btn btn-small addToCart"
+                                          data-product-id="20"
+                                      >
+                                          <i class="fas fa-cart-plus"></i
+                                          >Add to cart
+                                      </button>
+                                  </div>
+                              </figure>
+                              <div class="product-summary">
+                                  <h4 class="productName">Uncle chips</h4>
+                                  <h4 class="price">
+                                      Rs.<span class="priceValue"
+                                          >20</span
+                                      >
+                                  </h4>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="product">
+                          <div class="product-under">
+                              <figure class="product-image">
+                                  <img
+                                      src="Images/producs-images/marri.jpg"
+                                      alt="popular"
+                                  />
+                                  <div class="product-over">
+                                      <button
+                                          class="btn btn-small addToCart"
+                                          data-product-id="21"
+                                      >
+                                          <i class="fas fa-cart-plus"></i
+                                          >Add to cart
+                                      </button>
+                                  </div>
+                              </figure>
+                              <div class="Marie Gold">
+                                  <h4 class="productName">Marie gold</h4>
+                                  <h4 class="price">
+                                      Rs.<span class="priceValue"
+                                          >20</span
+                                      >
+                                  </h4>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </section>
+  </main>
+</div>
+
+
+        <footer>
+            <div class="footer-second">
+                <div class="footer-column-2">
+                    <h3>Customer service</h3>
+                    <a href="#">Contact</a>
+                    <a href="#">Track your order</a>
+                </div>
+                <div class="footer-column-3">
+                    <h3>About us</h3>
+                    <a href="about.html">Who we are</a>
+                </div>
+            </div>
+            <ul class="footer-last">
+                <li>
+                    <p><i class="fab fa-cc-mastercard"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-paypal"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-visa"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-amex"></i></p>
+                </li>
+            </ul>
+        </footer>
+        <script src="JS/script.js"></script>
+        <script src="shopping-cart.js"></script>
+    </body>
+</html>
